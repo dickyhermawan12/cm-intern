@@ -1,0 +1,13 @@
+version: '3'
+services:
+  miniapp-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:3000"
+      # "outside port : docker port"
+    restart: always
+
+networks:
+  net:
